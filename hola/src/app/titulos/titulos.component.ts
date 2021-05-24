@@ -26,7 +26,9 @@ export class TitulosComponent implements OnInit {
 
   ngOnInit(): void {}
   //con ng model podemos tanto dar datos a una variable como tambien mostrarlo.
+
   ingresar() {
+    // console.log(evento);
     console.log(this.nombre);
     console.log(this.password);
   }
@@ -54,15 +56,15 @@ export class TitulosComponent implements OnInit {
     evento.srcElement.style.width = '300px';
   }
 
-  cambiartamaño(evento: any) {
+  cambiartamano(evento: any) {
     evento.srcElement.style.width = '600px';
     evento.srcElement.style.heigth = '800px';
     evento.srcElement.style.border = '1px solid blue';
   }
 
-  minimizartamaño(evento: any) {
+  minimizartamano(evento: any) {
     evento.srcElement.style.width = '300px';
-    evento.srcElement.style.heigth = '400px';
+    evento.srcElement.style.heigth = '300px';
     evento.srcElement.style.border = '1px solid red';
   }
 }

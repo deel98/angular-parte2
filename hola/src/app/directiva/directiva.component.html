@@ -1,0 +1,32 @@
+<!-- <div *ngIf="!cargando">
+    <p>termino de cargar</p>
+</div>
+
+<img *ngIf="cargando" src="https://img1.picmix.com/output/stamp/normal/8/5/2/9/509258_fb107.gif" alt="">
+
+<button (click)="alternando()" >alternando</button> -->
+
+<!-- <button (click)="mostrarCargando()" >Mostrar cargando</button> -->
+<!-- 
+<div *ngFor="let nombre of nombres">
+    <p>Hola, mi nombre es: {{ nombre}} </p>
+</div>
+
+<div *ngFor="let producto of productos" class="producto">
+<p>El producto es: {{ producto.nombre}}</p>
+<p>Su stock es: {{ producto.stock}}</p>
+<p>Su fabricante es: {{producto.fabricante}}</p>
+<p>Su fecha de vencimiento es: {{producto.FechaVence}}</p>
+</div> -->
+<div class="tab" [ngSwitch]="pestana">
+  <button (click)="cambiarPestana('perfil')">Perfil</button>
+  <button (click)="cambiarPestana('puntos')">Puntos</button>
+  <button (click)="cambiarPestana('info')">Info</button>
+
+  <div class="tabContenido">
+    <p *ngSwitchCase="'perfil'">Este es el perfil</p>
+    <p *ngSwitchCase="'puntos'">Estos son los puntos</p>
+    <p *ngSwitchCase="'info'">Esta es la info</p>
+    <p *ngSwitchDefault>Seleccione una pestaña</p>
+  </div>
+</div>
