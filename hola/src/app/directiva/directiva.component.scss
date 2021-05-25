@@ -1,8 +1,8 @@
-// .producto{
-//     border: 1px solid black;
-//     padding-left: 50px;
-//     margin: 15px;
-// }
+ .producto{
+     border: 1px solid black;
+     padding-left: 50px;
+     margin: 15px;
+ }
 
 
 .tab{
@@ -17,4 +17,18 @@
     background: lightcoral;
     padding-left: 15px;
     margin: auto;
+}
+
+.cuadrado{
+    width: 200px;
+height: 200px;
+background: lightseagreen;
+}
+
+.textoimportante{
+    color: blue;
+}
+
+.textoGrande{
+    font-size: 30px;
 }

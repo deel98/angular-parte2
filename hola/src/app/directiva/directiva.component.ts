@@ -5,6 +5,8 @@ interface Producto {
   stock: number;
   fabricante: string;
   FechaVence: Date;
+  esImportante: boolean;
+  textoGrande: boolean;
 }
 
 @Component({
@@ -13,6 +15,7 @@ interface Producto {
   styleUrls: ['./directiva.component.scss'],
 })
 export class DirectivaComponent implements OnInit {
+  mostrarCuadrado: boolean = false;
   pestana: string = '';
   cargando: boolean = true;
   nombres: Array<string> = ['maria', 'juan', 'cesar', 'ramón'];
@@ -22,18 +25,24 @@ export class DirectivaComponent implements OnInit {
       stock: 15,
       fabricante: 'distribuidor Industrial',
       FechaVence: new Date('04/22/2021'),
+      esImportante: false,
+      textoGrande: true,
     },
     {
       nombre: 'Maíz',
       stock: 24,
       fabricante: 'distribuidor Industrial',
       FechaVence: new Date('05/22/2021'),
+      esImportante: true,
+      textoGrande: false,
     },
     {
       nombre: 'Refresco',
       stock: 30,
       fabricante: 'distribuidor Coca-Cola',
       FechaVence: new Date('06/22/2021'),
+      esImportante: true,
+      textoGrande: true,
     },
   ];
 
@@ -54,5 +63,9 @@ export class DirectivaComponent implements OnInit {
 
   cambiarPestana(pestana: string) {
     this.pestana = pestana;
+  }
+
+  alternarFondo() {
+    this.mostrarCuadrado = !this.mostrarCuadrado;
   }
 }

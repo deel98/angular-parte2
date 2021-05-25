@@ -18,7 +18,9 @@
 <p>Su fabricante es: {{producto.fabricante}}</p>
 <p>Su fecha de vencimiento es: {{producto.FechaVence}}</p>
 </div> -->
-<div class="tab" [ngSwitch]="pestana">
+
+<!-- //pestaña -->
+<!-- <div class="tab" [ngSwitch]="pestana">
   <button (click)="cambiarPestana('perfil')">Perfil</button>
   <button (click)="cambiarPestana('puntos')">Puntos</button>
   <button (click)="cambiarPestana('info')">Info</button>
@@ -29,4 +31,25 @@
     <p *ngSwitchCase="'info'">Esta es la info</p>
     <p *ngSwitchDefault>Seleccione una pestaña</p>
   </div>
+</div> -->
+
+<button (click)="alternarFondo()">Alternar</button>
+<div [ngClass]="{ cuadrado: mostrarCuadrado }">
+  <p>Este cuadrado debería aparecer con un fondo lightscreen</p>
+</div>
+
+<div *ngFor="let producto of productos" class="producto">
+  <p
+    [ngClass]="{
+      textoimportante: producto.esImportante,
+      textoGrande: producto.textoGrande
+    }"
+  >
+    El producto es: {{ producto.nombre }}
+  </p>
+  <p>Su stock es: {{ producto.stock }}</p>
+  <p>Su fabricante es: {{ producto.fabricante }}</p>
+  <p [class.textoimportante]="producto.esImportante">
+    Su fecha de vencimiento es: {{ producto.FechaVence }}
+  </p>
 </div>
