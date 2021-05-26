@@ -9,9 +9,10 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ContinuaraPipe } from './continuara.pipe';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 @NgModule({
-  declarations: [AppComponent, TitulosComponent, DirectivaComponent, EjemploComponent, PipesComponent, ContinuaraPipe],
+  declarations: [AppComponent, TitulosComponent, DirectivaComponent, EjemploComponent, PipesComponent, ContinuaraPipe, Pagina404Component],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
