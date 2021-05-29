@@ -1,1 +1,7 @@
-<p>articulo-detalle works!</p>
+<div class="container">
+    <h4>Hola el producto es una {{articulo.nombre}}</h4>
+    <p>y su precio es {{articulo.precio | currency}} </p>
+    <p>su descripcion {{articulo.descripcion}}</p>
+    <p>su precio de mayoreo es {{articulo.precioMayorista | currency}}</p>
+    <p>solo quedan disponibles en stock {{articulo.stock | currency}}</p>
+</div>
